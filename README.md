@@ -1,5 +1,7 @@
 # ⚙️ Industrial Copper Modeling
 
+
+### Video Link   https://www.linkedin.com/posts/vinod-r-467a48276_project-5-industrial-copper-modeling-ugcPost-7484861751298056192-3FZi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENuFI8BEqwFM8YjuiKM8CRU5uMliVj9tpo
 ---
 
 ## 🚀 Project Overview
@@ -78,23 +80,3 @@ This project addresses these issues by:
 - A **Classification model** that predicts lead status (WON/LOST).  
 - An **interactive Streamlit app** for real-time predictions.  
 - Improved accuracy and reliability compared to manual methods.  
-
----
-
-## 📘 Learning Outcomes
-- Python data analysis with Pandas, NumPy, Seaborn, Matplotlib.  
-- Preprocessing techniques: missing values, outlier detection, skewness treatment.  
-- Regression & Classification modeling with Scikit-learn/XGBoost.  
-- Feature engineering and correlation analysis.  
-- Streamlit app development for ML deployment.  
-- Practical exposure to challenges in **manufacturing analytics**.  
-
----
-
-## 📊 Project Evaluation Metrics
-- ✅ Modular, maintainable code (functional blocks).  
-- ✅ Portable across environments.  
-- ✅ Public GitHub repository with README.md.  
-- ✅ Workflow and execution steps documented.  
-- ✅ Follows [PEP 8 Coding Standards](https://www.python.org/dev/peps/pep-0008/).  
-- ✅ Demo video posted on LinkedIn.
