@@ -1,42 +1,6 @@
 """
 Industrial Copper Modeling — Streamlit app.
 
-Reproduces the EXACT preprocessing pipeline used in the training notebook
-(Industrial_Copper_Simplified.ipynb), using the artifacts saved by the
-"Save Artifacts for Deployment" cell at the end of that notebook.
-
-Regression features (order, from X.columns in the notebook):
-    country, application, thickness, width, product_ref,
-    quantity_tons_log, material_ref_freq,
-    item type_<category> one-hot columns, status_<category> one-hot columns
-  target: selling_price_log = log1p(selling_price)  ->  price = expm1(pred)
-
-Classification features (order, from X1.columns in the notebook):
-    country, application, thickness, width, product_ref,
-    quantity_tons_log, material_ref_freq,
-    item type_<category> one-hot columns
-  (status is NOT a feature here -- it's the label being predicted, so its
-   one-hot columns are excluded from classification features entirely)
-  target: 1 = Won, 0 = Lost
-
-Notes vs. the previous version of this app:
-  - material_ref is now encoded as a simple FREQUENCY COUNT (how often that
-    reference appears in training data), not a target-mean lookup. Unseen
-    references fall back to the average frequency across all references.
-  - item type / status are plain one-hot columns built with pd.get_dummies,
-    not a fitted OrdinalEncoder -- so this app builds the one-hot row by
-    hand and reindexes to the saved column order (this also correctly
-    handles the "dropped" baseline category from drop_first=True: it's
-    just left as all-zeros, exactly as during training).
-  - country / application / product_ref are used as-is (already numeric
-    codes in the raw dataset) -- no rare-category grouping or encoder needed.
-  - The classification tab no longer asks for a quoted selling price or
-    status -- neither is a model input anymore.
-
-Expected files, all inside a "source" folder next to this script:
-    source/artifacts.pkl
-    source/best_regression_model.pkl
-    source/best_classification_model.pkl
 """
 
 import os
